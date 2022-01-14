@@ -7,6 +7,7 @@ body{
     font-family: 'Be Vietnam Pro', sans-serif;
     box-sizing: border-box;
     height: 100vh;
+    
 }
 :root{
     --primary:#E02C6D;
@@ -17,6 +18,18 @@ body{
     width: 1200px;
     margin: 0 auto;
 
+}
+.article-common{
+        box-shadow: 2px 0px 15px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 24px;
+        border-radius: 6px;
+}
+.header-item{
+    margin-bottom: 100px;
 }
 .fa-cart-plus{
     font-size: 20px;
@@ -51,6 +64,10 @@ color: var(--secondary);
     <!-- ------------------------------------------------------------------------------------------------ -->
     <!-- end-nav-bar -->
     <!-- -------------------------------------------------------------------------------------------------------- --> */
+    
+    .article-title h3{
+
+    }
     .top-item{
         margin-top: 50px;
         display: flex;
@@ -69,11 +86,9 @@ color: var(--secondary);
         color: var(--secondary);
         margin-bottom: 10px;
     }
-    .left-item small{
-
-    }
+    
     .primary-btn button{
-    margin-top: 18px;
+    margin-top: 30px;
     background-color: var(--primary);
     padding: 10px 24px;
     font-weight: bold;
@@ -88,12 +103,63 @@ color: var(--secondary);
         top: 5px;
         box-shadow: 0px 4px 0px #ad0743;
     }
+    .right-item{
+        animation-name: animate;
+    }
+    @keyframes animate{
+        0%, 100%{
+            transform: translateY(rem);
+        }
+        50%{
+            transform: translateY(3rem);
+        }
+    }
     .bg-image{
         position: relative;
+        animation:animate 3s linear infinite;
     }
     .camera-image{
         position: absolute;
         top: 167px;
+        animation:animate 3s linear infinite;
+    }
+    span.time{
+        background: #FFE4E8;
+        border-radius: 14.6913px;
+        font-size: 14.6913px;
+        color: #FF4A60;
+        padding: 1px 10px;
+        margin-left: 25px;
+    }
+    .fa-star{
+        color: #FFC014;
+    }
+    .fa-arrow-right{
+        cursor: pointer;
+    }
+    .article-title h3{
+        display: flex;
+        justify-content: center;
+        font-size: 28px;
+        margin-bottom: 65px;
+        color: var(--secondary);
+    }
+    .article{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 50px;
+    }
+    .artile-para small{
+        color: var(--secondary);  
+    }
+    .artile-heading h3{
+    font-size: 20px;
+    color: var(--secondary);
+    }
+    .article-details{
+        width: 280px;
+        line-height: 25px;
+        margin-top: 13px;
     }
 
 
