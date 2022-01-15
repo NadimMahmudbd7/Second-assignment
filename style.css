@@ -250,13 +250,12 @@ color: var(--secondary);
     border-right: 4px solid;
     border-image-slice: 1;
     border-radius: 15px;
+    margin-bottom: 150px;
+    display: flex;
+    justify-content: space-around;
 }
 .footer-section title{
     display: block;
-}
-.footer-section {
-    display: flex;
-    justify-content: space-around;
 }
 .customer-review {
     width: 255px;
@@ -321,7 +320,6 @@ color: var(--secondary);
         top: 150px;
         left: 0;
         width: 100%;
-        /* transform: translateY(-500px); */
     }
     .fa-bars {
         font-size: 40px;
@@ -435,15 +433,8 @@ color: var(--secondary);
         transition: all 1s;
         }
     }
-
-    .footer-section{
-        justify-content: space-around;
-    }
     .footer-section title{
         display: block;
-    }
-    .footer-section {
-        justify-content: space-around;
     }
     
     /* mediaquary for tab phone */
