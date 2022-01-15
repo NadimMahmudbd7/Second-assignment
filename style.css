@@ -14,6 +14,10 @@ body{
     --secondary:#3A3A3A;
 
 }
+span{
+    color: var(--primary);
+    font-weight: bold;
+}
 .container{
     width: 1200px;
     margin: 0 auto;
@@ -37,7 +41,7 @@ body{
     margin-bottom: 100px;
 }
 .fa-cart-plus{
-    font-size: 20px;
+    font-size: 25px;
     cursor: pointer;
 }
 .nav-bar{
@@ -57,6 +61,13 @@ color: var(--secondary);
 .nav-menu ul li{
     list-style: none;
     margin: 0 20px;
+    padding: 9px 18px;
+    border-radius: 9px;
+}
+.nav-menu ul li:hover{
+    background-color: var(--primary);
+    color: white;
+    transition: 0.8s;
 }
 .nav-menu ul li a{
     text-decoration: none;
@@ -184,7 +195,14 @@ span.time{
 }
 .fa-arrow-right{
     cursor: pointer;
+    color: white;
+    margin-left: 5px;
 }
+.test{
+    color: white;
+}
+
+
 .article-title h3{
     display: flex;
     justify-content: center;
@@ -374,6 +392,9 @@ color: var(--secondary);
         display: none;
 
     }
+    .fa-bars{
+        display: inline-block;
+    }
     #toggler:checked ~ ul{
         transform: scaleY(1);
         transition: all 1s;
@@ -491,12 +512,11 @@ color: var(--secondary);
         top: -33px;
         left: -28px;
     }
-    .toggle{
-        display: block;
+    .fa-bars{
+        display: inline-block;
     }
     #toggler{
         display: none;
-
     }
     #toggler:checked ~ ul{
         transform: scaleY(1);
