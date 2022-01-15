@@ -26,6 +26,11 @@ span{
 #toggler,.fa-bars{
     display: none;
 }
+.ionion{
+    position: relative;
+    top: 2px;
+}
+
 .article-common{
         box-shadow: 2px 0px 15px;
         display: flex;
@@ -269,6 +274,8 @@ color: var(--secondary);
     color: var(--primary);
     cursor: pointer;
     margin-bottom: 100px;
+    position: relative;
+    top: -3px;
 }
 .customer-says h1{
     text-align: center;
@@ -278,7 +285,7 @@ color: var(--secondary);
 .footer-section{
     justify-content: space-around;
     margin-bottom: 100px;
-    padding: 84px;
+    padding: 40px 0px;
     box-shadow: -30px 30px 20px rgb(0,0,0,0.3);
     border-image: linear-gradient(
     45deg, #e02c80, #f79eb3);
