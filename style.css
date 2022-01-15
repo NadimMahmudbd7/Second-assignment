@@ -19,7 +19,7 @@ body{
     margin: 0 auto;
 
 }
-.toggle{
+#toggler,.fa-bars{
     display: none;
 }
 .article-common{
@@ -176,6 +176,12 @@ span.time{
 .icon-blank{
     color: black;
 }
+.fa-bars{
+    font-size: 40px;
+    position: relative;
+    top: -0.2em;
+    left: 93%;
+}
 .fa-arrow-right{
     cursor: pointer;
 }
@@ -216,6 +222,8 @@ color: var(--secondary);
     background-color: black;
     width: 80px;
     
+}.toggler{
+    display: none;
 }
 
 
@@ -260,6 +268,12 @@ color: var(--secondary);
         width: 100%;
         /* transform: translateY(-500px); */
     }
+    .fa-bars {
+        font-size: 40px;
+        position: relative;
+        top: -2.4em;
+        left: 90%;
+    }
 
     .nav-menu ul {
         display: flex;
@@ -269,7 +283,8 @@ color: var(--secondary);
         line-height: 41px;
         background-color: #edebe8;
         padding: 21px;
-        transform: translateY(-700px);
+        transform: scaleY(0);
+        transform-origin: top;
     }
     .nav-title h1{
         margin-left: 30px;
@@ -312,6 +327,9 @@ color: var(--secondary);
         grid-row-gap: 15px;
         justify-content: center;
     }
+    .artile-image img{
+        width: 100%;
+    }
     .article-common {
         box-shadow: 2px 0px 15px;
         display: flex;
@@ -353,24 +371,135 @@ color: var(--secondary);
         display: block;
     }
     #toggler{
-        display: block;
+        display: none;
 
     }
-    #toggler:checked ~.nav-menu li{
-        transform:translateY(0px);
+    #toggler:checked ~ ul{
+        transform: scaleY(1);
+        transition: all 1s;
         }
+    }
     /* mediaquary for tab phone */
 /* --------------------------------------------------------------------------------- */
-@media (min-width:688px) and (max-width:992px) {
-    .nav-menu ul {
-         display: none;
-         align-items: center;
-         flex-direction: column;
-         position: relative;
-         line-height: 41px;
-         background-color: #200202;
-         padding: 21px;
-         transform: translateY(0px);
+@media (min-width:688px) and (max-width:1024px) {
+    .container {
+        width: auto;
+        margin: 0 auto;
+        overflow: hidden;
     }
-     
+    .nav-menu{
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+    }
+    .left-item{
+        margin-bottom: 10px;
+        margin-top: 100px;
+    }
+
+    .nav-menu ul {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        position: relative;
+        line-height: 41px;
+        background-color: #edebe8;
+        padding: 21px;
+        transform: scaleY(0);
+        transform-origin: top;
+    }
+    .nav-title h1{
+        margin-left: 30px;
+    }
+    .top-item {
+        margin-top: 50px;
+        display: flex;
+        justify-content: space-between;
+        height: 700px;
+        flex-direction: column-reverse;
+    }
+    .bg-image img{
+        width: 63%;
+        position: relative;
+        z-index: -1;
+        left: 150px;
+    }
+    .nav-menu ul li a {
+        font-size: 33px;
+    }
+    .bg-image{
+        z-index: -1;
+    }
+    .camera-image {
+        z-index: -1;
+    }
+    .camera-image img{
+    width: 77%;
+    position: relative;
+    left: 45%;
+    top: 61px;
+    z-index: -1;
+    }
+    .left-item h2 {
+        font-size: 31px;
+        color: var(--secondary);
+        margin-bottom: 10px;
+    }
+    .icon-random{
+        display: grid;
+        grid-row-gap: 15px;
+        justify-content: center;
+    }
+    .article-common {
+        box-shadow: 2px 0px 15px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 24px;
+        border-radius: 6px;
+        width: 50%;
+        margin: auto;
+    }
+    .article {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 50px;
+        margin-bottom: 65px;
+    }
+    .artile-image img{
+        width: 100%;
+    }
+    .article-details{
+        width: 100%;
+    }
+    .left-item {
+        width: 100%;
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .see-more {
+        display: flex;
+        flex-direction: row-reverse;
+        color: var(--primary);
+        cursor: pointer;
+        position: relative;
+        top: -33px;
+        left: -28px;
+    }
+    .toggle{
+        display: block;
+    }
+    #toggler{
+        display: none;
+
+    }
+    #toggler:checked ~ ul{
+        transform: scaleY(1);
+        transition: all 1s;
+        }
 }
