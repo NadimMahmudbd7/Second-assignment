@@ -432,10 +432,14 @@ color: var(--secondary);
         transform: scaleY(1);
         transition: all 1s;
         }
+    .mobile{
+        flex-direction: column;
+        align-items: center;
     }
     .footer-section title{
         display: block;
     }
+}
     
     /* mediaquary for tab phone */
 /* --------------------------------------------------------------------------------- */
